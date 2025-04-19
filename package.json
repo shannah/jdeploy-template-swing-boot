@@ -1,0 +1,36 @@
+{
+    "bin": {"jdeploy-template-swing-boot": "jdeploy-bundle/jdeploy.js"},
+    "author": "Steve Hannah",
+    "description": "jDeploy Swing Spring Boot Starter Project",
+    "main": "index.js",
+    "preferGlobal": true,
+    "repository": "",
+    "version": "1.0.0",
+    "jdeploy": {
+        "jdk": false,
+        "buildCommand": [
+            "./mvnw",
+            "package"
+        ],
+        "publishTargets": [{
+            "name": "npm: jdeploy-template-swing-boot",
+            "type": "NPM",
+            "url": "jdeploy-template-swing-boot"
+        }],
+        "javaVersion": "21",
+        "jar": "target/jdeploy-template-swing-boot-1.0-SNAPSHOT.jar",
+        "javafx": false,
+        "title": "JDeploy Swing Boot"
+    },
+    "dependencies": {
+        "command-exists-promise": "^2.0.2",
+        "node-fetch": "2.6.7",
+        "tar": "^4.4.8",
+        "yauzl": "^2.10.0",
+        "shelljs": "^0.8.4"
+    },
+    "license": "ISC",
+    "name": "jdeploy-template-swing-boot",
+    "files": ["jdeploy-bundle"],
+    "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
+}
